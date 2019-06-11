@@ -1,0 +1,31 @@
+<% if (page.path === "tags/index.html"){ %>
+<div class="tags-cloud">
+    <%- tagcloud(site.tags, {
+        min_font: 15, 
+        max_font: 15
+    }) %>
+</div>
+<% }else{ %>
+<div class="posts">
+    <% for(index in page.posts.data){ %>
+    <div class="post-item-wrapper">
+        <%- link_to(page.posts.data[index].path, page.posts.data[index].title, {class:'post-title'}) %>
+        <div class="post-excerpt">
+            <div class="date-and-category">
+            <div class="date"><%- date(page.posts.data[index].date, 'YYYY-MM-DD') %></div>
+                <div class="categories">
+                    <a href="/categories/coding/">coding</a>
+                </div>
+            </div>
+            <div class="excerpt typo">
+                <%- page.posts.data[index].excerpt %>
+            </div>
+            <div class="tags">
+                <%- tagcloud(page.posts.data[index].tags,{min_font: 10,max_font: 10}); %>
+            </div>
+        </div>
+    </div>
+    <% } %>
+</div>
+<% } %>
+

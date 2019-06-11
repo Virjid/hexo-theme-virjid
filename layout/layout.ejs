@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<%- partial('partial/global/head') %>
+<body>
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object" id="object_one"></div>
+                <div class="object" id="object_two"></div>
+                <div class="object" id="object_three"></div>
+                <div class="object" id="object_four"></div>
+            </div>
+        </div>
+    </div>
+    <%- partial('partial/global/header') %>
+    <%- body %>
+    <%- partial('partial/global/footer') %>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/js/plugin.js"></script>
+    <script>$('#v-calendar').vCalendar('init');</script>
+</body>
+</html>
