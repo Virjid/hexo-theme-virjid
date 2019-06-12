@@ -12,6 +12,7 @@
             </div>
         </div>
     </div>
+    <%- partial('widget/menu') %>
     <%- partial('partial/global/header') %>
     <%- body %>
     <%- partial('partial/global/footer') %>
@@ -19,5 +20,14 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="/js/plugin.js"></script>
     <script>$('#v-calendar').vCalendar('init');</script>
+    <script>
+        $('.profile-avatar').click(()=>{
+            if($('#cxo-profile').hasClass('profile-close')) {
+                $('#cxo-profile').removeClass('profile-close');
+            } else {
+                $('#cxo-profile').addClass('profile-close');
+            }
+        });
+    </script>
 </body>
 </html>
