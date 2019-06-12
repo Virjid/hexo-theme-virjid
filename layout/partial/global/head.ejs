@@ -3,17 +3,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Hello~ I'm <%= theme.virjid.author %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/main-header.css">
-    <link rel="stylesheet" href="/css/v-calendar.css">
-    <link rel="stylesheet" href="/css/main-footer.css">
-    <link rel="stylesheet" href="/css/loading.css">
-    <link rel="stylesheet" href="/css/posts.css">
+    <link rel="stylesheet" href="/css/global/style.css">
     <% if(is_home()){ %>
-    <link rel="stylesheet" href="/css/foic.css">
-    <link rel="stylesheet" href="/css/works.css">
-    <link rel="stylesheet" href="/css/tags.css">
-    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/index/style.css">
     <% }else if(is_post()){ %>
     <link rel="stylesheet" href="/css/md.css">
     <% }else if(is_tag() || page.path==="tags/index.html"){ %>
