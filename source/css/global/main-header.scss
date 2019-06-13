@@ -1,0 +1,64 @@
+.banner {
+    $banner-box-bg: url(/img/bridge.jpg);
+    $banner-box-bg-color: #8DA9CF;
+    $banner-box-height: 60vh;
+    $banner-size: 3.5rem;
+    $banner-color: #fff;
+    
+    height: $banner-box-height;
+    background: {
+        color: $banner-box-bg-color;
+        image: $banner-box-bg;
+        size: cover;
+        repeat: no-repeat;
+        position: center bottom;
+        attachment: fixed;
+    }
+    position: relative;
+    overflow: hidden;
+
+    h1 {
+        color: $banner-color;
+        font-size: $banner-size;
+        float: left;
+        position: relative;
+        top:50%; left:75%;
+        transform: translate(-50%, -50%);
+        font-family: 'Mouse','Courier New', Courier, monospace;
+        letter-spacing: 15px;
+        &::before,&::after {
+            content: '';
+            position: absolute;
+            width:70%; height:7rem;
+            border: 3px solid;
+            border-color: $banner-color;
+            left: 50%;
+        }
+        &::before {
+            border-bottom: none;
+            transform: translate(-50%, -9rem);
+        }
+        &::after {
+            border-top: none;
+            transform: translate(-50%, 5.5rem);
+        }
+    }
+    .slant-left {
+        background: #fff;
+        width: 101%;
+        position: absolute;
+        bottom: -80px;
+        right: 48%;
+        height: 200px;
+        transform: rotate(6deg);
+    }
+    .slant-right {
+        background: #fff;
+        width: 101%;
+        position: absolute;
+        bottom: -80px;
+        left: 48%;
+        height: 200px;
+        transform: rotate(-6deg);
+    }
+}

@@ -1,0 +1,151 @@
+.post-content {
+    $default-fm: Helvetica, arial, freesans, clean, sans-serif;
+    $title-fm: Georgia, Palatino, serif;
+    $code-fm: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
+              "Lucida Sans Typewriter", "DejaVu Sans Mono",
+              "Bitstream Vera Sans Mono",
+              "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New",
+              Courier, monospace;
+    $default-margin-bottom: 1.4rem;
+
+    color: #444;
+    font-family: $default-fm;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.2rem;
+    width: 50vw;
+    margin: 50px auto;
+
+    p {
+        text-indent: 2em;
+        margin-bottom: $default-margin-bottom;
+        line-height: 2rem;
+        word-spacing: .06rem;
+        letter-spacing: .1rem;
+    }
+    
+
+    h1,h2,h3,h4,h5 {
+        color: #111;
+        margin-bottom: $default-margin-bottom;
+    }
+    h1,h2 {
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 5rem;
+        margin: 5rem auto 2rem auto;
+        border-bottom: 1px solid #dcdcdc;
+    }
+    h3 {
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 3rem;
+        margin: 2rem auto;
+        text-indent: 1em;
+        &:hover {
+            border-left: 9px solid #bbdcf1;
+            text-indent: calc(1em - 9px);
+        }
+    }
+    
+    a {
+        color: #42b983;
+        font-weight: 600;
+        padding: 0 2px;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .highlight {
+        font: {
+            size: 1.4rem;
+            weight: 500;
+            family: $code-fm;
+        }
+        line-height: 1.5rem;
+        margin-bottom: 1.4rem;
+        text-shadow: 0 1px #fff;
+        overflow-x: auto;
+        min-width: 60%;
+        border-top: 1px solid #3f3f3f;
+        border-bottom: 1px solid #3f3f3f;
+        background-color: rgba(144,144,144,0.1);
+        overflow-y: auto;
+        margin: 1.5rem 0;
+        td {
+            padding: 8px !important;
+        }
+        .gutter {
+            width: 40px;
+            text-align: right;
+        }
+        .code {
+            .line {color: #5ca5de;}
+            .keyword {color: #42b983;}
+            .string {color: #c113a7;}
+            .built_in {color: #333333;}
+            .comment {color: green;}
+        }
+    }
+
+    code {
+        margin: 0 2px;
+        padding: 2px 4px;
+        border-radius: 2px;
+        font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+    }
+
+    blockquote {
+        margin: 1rem 10px;
+        padding: 0.5em 10px;
+        background: inherit;
+        color: #2bbc8a;
+        quotes: "\201C" "\201D" "\2018" "\2019";
+        font-weight: bold;
+        &::before {
+            margin-right: 0.25em;
+            color: #2bbc8a;
+            content: "\201C";
+            vertical-align: -0.4em;
+            font-size: 2em;
+            line-height: 0.1em;
+        }
+    }
+
+    hr {
+        height: 2px;
+        padding: 0;
+        margin: 16px 0;
+        background-color: #e7e7e7;
+        border: 0 none;
+        overflow: hidden;
+        box-sizing: content-box;
+    }
+
+    ul {
+        padding: 10px 25px;
+        color: #777;
+        background-color: rgba(66, 185, 131, .1);
+        list-style: none;
+        margin: 1.5rem 0;
+        li {
+            height: 2rem;
+            font: {
+                size: 1.4rem;
+                weight: 500;
+            }
+            margin: 1.2rem 0;
+            border-left: 6px dotted #42b983;
+            padding: 0 15px;
+            line-height: 2rem;
+            &:hover {
+                border-left-style: solid;
+            }
+        }
+    }
+}

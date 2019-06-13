@@ -1,0 +1,27 @@
+* {margin:0; padding:0;}
+@font-face {
+    font-family: 'Mouse';
+    src: url(/fonts/Mouse.otf);
+}
+
+/**滚动条**/
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    &-button {width:5px; height:5px;}
+    &-track {
+        background:#fff;
+        border: 0px; border-radius:10px;
+        box-shadow: 0px 0px 3px #fff inset;
+    }
+    &-thumb {
+        background:#888;
+        border: 0px; border-radius:10px;
+        &:hover {background:#bbb;}
+    }
+}
+@import './loading';
+@import './main-header';
+@import './main-footer';
+@import './posts';
+@import './v-calendar';
