@@ -12,8 +12,26 @@
     font-family: $default-fm;
     -webkit-font-smoothing: antialiased;
     font-size: 1.2rem;
-    width: 50vw;
+    display: flex;
     margin: 50px auto;
+    justify-content: space-around;
+
+    main {
+        width: 50vw;
+    }
+
+    .toc {
+        // position: fixed;
+        // top: 500px;
+        // right: 5vw;
+        // width: 10vw;
+        ol {
+            margin-left: 60px;
+        }
+        li {
+            list-style-type: none;
+        }
+    }
 
     p {
         text-indent: 2em;
@@ -84,12 +102,17 @@
         .code {
             .line {color: #5ca5de;}
             .keyword {color: #42b983;}
-            .string {color: #c113a7;}
+            .string {color: #8c0778;}
             .built_in {color: #333333;}
             .comment {color: green;}
+            .selector-tag {color: orange;}
+            .selector-attr {color: orange;}
+            .attribute {color: #c113a7;}
+            .variable {color: #00407d;}
+            .number {color: #333;}
+            
         }
     }
-
     code {
         margin: 0 2px;
         padding: 2px 4px;
@@ -134,7 +157,7 @@
         list-style: none;
         margin: 1.5rem 0;
         li {
-            height: 2rem;
+            // height: 2rem;
             font: {
                 size: 1.4rem;
                 weight: 500;

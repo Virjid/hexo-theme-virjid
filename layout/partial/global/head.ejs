@@ -3,13 +3,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Hello~ I'm <%= theme.virjid.author %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/global/style.css">
-    <% if(is_home()){ %>
-    <link rel="stylesheet" href="/css/index/style.css">
-    <% }else if(is_post()){ %>
-    <link rel="stylesheet" href="/css/md.css">
-    <% }else if(is_tag() || page.path==="tags/index.html"){ %>
-    <link rel="stylesheet" href="/css/tag.css">
+    <%- css('css/global/style.css',
+            'http://apps.bdimg.com/libs/fontawesome/4.2.0/css/font-awesome.min.css') %>
+    <% if(is_home()) { %>
+        <%- css('css/index/style.css') %>
+    <% } else if(is_post()) { %>
+        <%- css('css/md.css') %>
+    <% } else if(is_tag() || page.path==="tags/index.html") { %>
+        <%- css('css/tag.css') %>
     <% } %>
     <script>
         function completeLoading() {
@@ -19,6 +20,5 @@
             }
         }
         document.onreadystatechange = completeLoading;
-        // document.onclick = completeLoading;
     </script>
 </head>

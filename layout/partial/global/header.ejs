@@ -1,9 +1,11 @@
 <header class="main-header">
+    <% if(is_home()) { %>
+    <div class="banner home">
+        <h1><a href="/" style="color:white;text-decoration:none;">Hi~ I'm Virjid!</a></h1>
+    </div>
+    <% } else { %>
     <div class="banner">
         <h1><a href="/" style="color:white;text-decoration:none;">Hi~ I'm Virjid!</a></h1>
-        <% if(theme.virjid.showSlant==true) { %>
-        <div class="slant-left"></div>
-        <div class="slant-right"></div>
-        <% } %>
     </div>
+    <% } %>
 </header> 

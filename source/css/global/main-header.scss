@@ -1,7 +1,8 @@
+$banner-box-home-bg: url(/img/bridge.jpg);
+$banner-box-bg: url(/img/archive.jpg);
 .banner {
-    $banner-box-bg: url(/img/bridge.jpg);
     $banner-box-bg-color: #8DA9CF;
-    $banner-box-height: 60vh;
+    $banner-box-height: 450px;
     $banner-size: 3.5rem;
     $banner-color: #fff;
     
@@ -11,8 +12,8 @@
         image: $banner-box-bg;
         size: cover;
         repeat: no-repeat;
-        position: center bottom;
-        attachment: fixed;
+        position: center;
+        attachment: local;
     }
     position: relative;
     overflow: hidden;
@@ -60,5 +61,12 @@
         left: 48%;
         height: 200px;
         transform: rotate(-6deg);
+    }
+}
+
+.banner.home {
+    background: {
+        image: $banner-box-home-bg;
+        position: center 70%;
     }
 }
